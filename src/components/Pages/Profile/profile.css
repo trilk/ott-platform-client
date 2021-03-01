@@ -1,0 +1,29 @@
+.update-profile__container {
+  height: 100vh;
+  width: 100%;
+  padding: 24px 20px;
+  overflow-y: auto;
+  padding-bottom: 10vh;
+}
+.update-profile__photo {
+  margin-top: 24px;
+  margin-bottom: 24px;
+}
+.update-profile__photo-avatar {
+  width: 120px;
+  height: 120px;
+  margin-right: 24px;
+}
+.radio-check {
+  width: 100%;
+}
+.radio-check div{
+  width: 220px;
+}
+.change-password {
+  height: 100vh;
+  width: 100%;
+  padding: 24px 20px;
+  overflow-y: auto;
+  padding-bottom: 10vh;
+}
