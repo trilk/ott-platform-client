@@ -25,3 +25,10 @@ export const showDrawer = (show) => {
     payload: show,
   };
 };
+
+export const userLogin = (user) => {
+  return {
+    type: "USER-LOGIN",
+    payload: user,
+  };
+};

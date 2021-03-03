@@ -355,3 +355,12 @@ select.classic {
 .active-input {
   border: thin solid #007bff;
 }
+
+.active-link {
+  background: red;
+  display: block;
+}
+.links{
+  display: none;
+  transition: 350ms;
+}

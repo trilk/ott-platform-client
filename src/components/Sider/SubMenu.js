@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
-
+import _ from "lodash";
 const Submenu = ({ item, onParentActive, parent, child, onChildActive }) => {
   const [subnav, setSubnav] = useState(false);
 
@@ -28,22 +28,22 @@ const Submenu = ({ item, onParentActive, parent, child, onChildActive }) => {
             : null}
         </div>
       </SidebarLink>
-      {subnav &&
-        item.subNav.map((item, index) => {
-          return (
-            <DropdownLink
-              to={item.path}
-              key={index}
-              onClick={() => onChildActive(item.path)}
-              active={child === item.path ? "true" : "false"}
-            >
-              <div className="row">
-                {item.icon}
-                <SidebarLabel>{item.title}</SidebarLabel>
-              </div>
-            </DropdownLink>
-          );
-        })}
+      {subnav && item.subNav.map((item, index) => {
+        return (
+          <DropdownLink
+            to={item.path}
+            key={index}
+            onClick={() => onChildActive(item.path)}
+            active={child === item.path ? "true" : "false"}
+            className={subnav ? "show-link" : ""}
+          >
+            <div className="row">
+              {item.icon}
+              <SidebarLabel>{item.title}</SidebarLabel>
+            </div>
+          </DropdownLink>
+        );
+      })}
     </>
   );
 };
@@ -61,7 +61,7 @@ const SidebarLink = styled(Link)`
   font-weight: bold;
   font-style: normal;
 
-  &:hover {
+  background-color:red &:hover {
     color: #ffffff;
     cursor: pointer;
   }
